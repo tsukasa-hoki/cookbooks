@@ -8,7 +8,7 @@
     "recipe[openssh]",
     "recipe[openssl]",
     "recipe[mysql]",
-    "recipe[mongodb]"
+    "recipe[mongodb]",
     "recipe[sqlite]",
     "recipe[perl]",
     "recipe[php]",
