@@ -1,0 +1,3 @@
+{
+  "run_list": [ "recipe[git]", "recipe[apache2]"i, "recipe[mysql]", "recipe[openssh]", "recipe[openssl]", "recipe[php]", "recipe[ruby]"i, "recipe[sqlite]", "recipe[java_sun]", "recipe[maven]", "recipe[memcached]", "recipe[passenger_apache2]", "recipe[perl]", "recipe[couchdb]" ]
+}
