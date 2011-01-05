@@ -31,3 +31,14 @@ when "centos"
     action :install
   end
 end
+
+rcfile = '/home/vagrant/.zshrc'
+template rcfile do
+  source "zshrc.erb"
+end
+
+file rcfile do
+  owner "vagrant"
+  group "vagrant"
+  mode "0644"
+end

@@ -22,3 +22,14 @@ package "vim"
 node[:vim][:extra_packages].each do |vimpkg|
   package vimpkg
 end
+
+rcfile = '/home/vagrant/.vimrc'
+template rcfile do
+  source "vimrc.erb"
+end
+
+file rcfile do
+  owner "vagrant"
+  group "vagrant"
+  mode "0644"
+end

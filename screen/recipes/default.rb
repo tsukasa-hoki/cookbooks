@@ -20,3 +20,14 @@
 package "screen" do
   action :install
 end
+
+rcfile = '/home/vagrant/.screenrc'
+template rcfile do
+  source "screenrc.erb"
+end
+
+file rcfile do
+  owner "vagrant"
+  group "vagrant"
+  mode "0644"
+end

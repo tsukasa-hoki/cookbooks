@@ -1,0 +1,94 @@
+colorscheme aqua
+au BufNewFile,BufRead *.as  setf actionscript
+au BufNewFile,BufRead *.mxml  setf mxml
+
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,ucs-2,cp932,latin1
+set nocompatible          " We're running Vim, not Vi!
+syntax on                 " Enable syntax highlighting
+filetype plugin indent on " Enable filetype-specific indenting and plugins
+
+set statusline=%F%m%r%h%w\%=[%Y]\[%{&ff}]\[%{&fileencoding}]\[%l-%L\ %v]
+
+set autoindent
+set cmdheight=2
+set expandtab
+set hlsearch
+set laststatus=2
+" set list
+" set listchars=tab:>促
+set number
+set ruler
+set showmatch
+set title
+set ts=2 sw=2 sts=0
+set viminfo=
+set ignorecase
+set incsearch
+
+set runtimepath=$HOME/.vim
+
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
+vnoremap { "zdi{<C-r>z}<ESC>
+vnoremap [ "zdi[<C-r>z]<ESC>
+vnoremap ( "zdi(<C-r>z)<ESC>
+vnoremap " "zdi"<C-r>z"<ESC>
+vnoremap ' "zdi'<C-r>z'<ESC>
+
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+
+nnoremap <Esc><Esc> :<C-u>set nohlsearch<Return>
+nnoremap / :<C-u>set hlsearch<Return>/
+nnoremap ? :<C-u>set hlsearch<Return>?
+nnoremap * :<C-u>set hlsearch<Return>*
+nnoremap # :<C-u>set hlsearch<Return>#
+
+highlight lastSpaces term=underline ctermbg=yellow guibg=yellow
+match lastSpaces /[ [:space:]]促+$/
+
+set matchpairs+=<:>
+
+" see :help ft-ruby-omni
+" let g:rubycomplete_buffer_loading = 1
+" let g:rubycomplete_classes_in_global = 1
+" let g:rubycomplete_rails = 1
+"
+" " see :help yankring
+" let g:yankring_persist = 0
+"
+
+map <C-c> :NERDTree
+
+set tags+=~/.tags
+
+
+""<TAB>で補完
+"" {{{ Autocompletion using the TAB key
+"" This function determines, wether we are on the start of the line text (then tab indents) or
+"" if we want to try autocompletion
+"function! InsertTabWrapper()
+"        let col = col('.') - 1
+"        if !col || getline('.')[col - 1] !~ '\k'
+"                return "\<TAB>"
+"        else
+"                if pumvisible()
+"                        return "\<C-N>"
+"                else
+"                        return "\<C-N>\<C-P>"
+"                end
+"        endif
+"endfunction
+"" Remap the tab key to select action with InsertTabWrapper
+"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"" }}} Autocompletion using the TAB key
+
+set makeprg=cat\ %\ \\\|\ /usr/bin/js\ ~/.vim/mylintrun.js\ %
+set errorformat=%f:%l:%c:%m
