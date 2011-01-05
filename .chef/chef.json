@@ -17,9 +17,6 @@
     "recipe[passenger]",
     "recipe[python]",
     "recipe[memcached]",
-    "recipe[java]",
-    "recipe[maven]",
-    "recipe[tomcat]",
     "recipe[capistrano]"
   ]
 }
