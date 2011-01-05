@@ -34,7 +34,7 @@ file rcfile do
   mode "0644"
 end
 
-rcfile = '/home/vagrant/.gitignore'
+ignorefile = '/home/vagrant/.gitignore'
 template ignorefile do
   source "gitignore.erb"
 end
