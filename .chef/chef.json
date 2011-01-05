@@ -14,7 +14,7 @@
     "recipe[ruby]",
     "recipe[python]",
     "recipe[memcached]",
-    "recipe[java]",
+    "recipe[java_sun]",
     "recipe[maven]",
     "recipe[tomcat6]",
     "recipe[capistrano]"
