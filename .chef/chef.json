@@ -12,10 +12,14 @@
     "recipe[mongodb]",
     "recipe[sqlite]",
     "recipe[perl]",
-    "recipe[php5]",
+    "recipe[php]",
     "recipe[ruby]",
+    "recipe[passenger]",
     "recipe[python]",
     "recipe[memcached]",
+    "recipe[java_sun]",
+    "recipe[maven]",
+    "recipe[tomcat]",
     "recipe[capistrano]"
   ]
 }
