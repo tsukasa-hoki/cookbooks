@@ -18,4 +18,8 @@
 # limitations under the License.
 #
 
-require_recipe "php5"
+require "php5"
+require "gd"
+require "memcache"
+require "mysql"
+require "apc"
