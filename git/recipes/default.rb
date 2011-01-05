@@ -22,3 +22,25 @@ when "debian", "ubuntu"
 else 
   package "git"
 end
+
+rcfile = '/home/vagrant/.gitconfig'
+template rcfile do
+  source "gitconfig.erb"
+end
+
+file rcfile do
+  owner "vagrant"
+  group "vagrant"
+  mode "0644"
+end
+
+rcfile = '/home/vagrant/.gitignore'
+template ignorefile do
+  source "gitignore.erb"
+end
+
+file ignorefile do
+  owner "vagrant"
+  group "vagrant"
+  mode "0644"
+end

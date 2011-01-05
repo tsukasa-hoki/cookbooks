@@ -18,8 +18,3 @@
 # limitations under the License.
 #
 
-require "php5"
-require "gd"
-require "memcache"
-require "mysql"
-require "apc"
