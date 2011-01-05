@@ -3,6 +3,20 @@
     "recipe[zsh]",
     "recipe[screen]",
     "recipe[vim]",
-    "recipe[git]"
+    "recipe[git]",
+    "recipe[apache2]",
+    "recipe[openssh]",
+    "recipe[openssl]",
+    "recipe[mysql]",
+    "recipe[sqlite]",
+    "recipe[perl]",
+    "recipe[php]",
+    "recipe[ruby]",
+    "recipe[python]",
+    "recipe[memcached]",
+    "recipe[java_sun]",
+    "recipe[maven]",
+    "recipe[tomcat6]",
+    "recipe[capistrano]"
   ]
 }
