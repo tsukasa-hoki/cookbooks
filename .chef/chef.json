@@ -1,3 +1,8 @@
 {
-  "run_list": [ "recipe[zsh]", "recipe[screen]", "recipe[vim]", "recipe[git]", "recipe[apache2]", "recipe[mysql]", "recipe[openssh]", "recipe[openssl]", "recipe[php]", "recipe[ruby]", "recipe[sqlite]", "recipe[memcached]", "recipe[perl]" ]
+  "run_list": [
+    "recipe[zsh]",
+    "recipe[screen]",
+    "recipe[vim]",
+    "recipe[git]"
+  ]
 }
