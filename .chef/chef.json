@@ -12,7 +12,7 @@
     "recipe[mongodb]",
     "recipe[sqlite]",
     "recipe[perl]",
-    "recipe[php]",
+    "recipe[php5]",
     "recipe[ruby]",
     "recipe[python]",
     "recipe[memcached]",
